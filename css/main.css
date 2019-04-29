@@ -10,6 +10,7 @@ body {
 }
 
 .main {
+  width: 80%;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -33,9 +34,35 @@ body {
 
 .main .piano .white {
   fill: #fff;
+  -webkit-transition: fill 0.4s ease;
+  transition: fill 0.4s ease;
 }
 
 .main .piano path:hover {
   cursor: pointer;
+}
+
+.main .keydown {
+  -webkit-animation: keydown 0.3s ease-in-out forwards;
+  animation: keydown 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes keydown {
+  0% {
+    fill: #fff;
+  }
+  20%,
+  100% {
+    fill: #f4d442;
+  }
+}
+
+@keyframes keydown {
+  0% {
+    fill: #fff;
+  }
+  100% {
+    fill: #68e752;
+  }
 }
 /*# sourceMappingURL=main.css.map */
